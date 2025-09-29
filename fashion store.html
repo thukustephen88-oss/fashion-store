@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">Fashion Store</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">New In</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Cart(0)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Elevate your Style. Effortlessly</h1>
+      <p>Stop blending in. Start turning heads. Discover the exclusive collection of clothes and accessories designed to
+        make your next entrance unforgettable. Your style upgrade is waiting.</p>
+      <p>Dress smarter, not harder. Find your new everyday essentials—pieces that mix, match, and feel incredible.
+        Effortless style starts here.</p>
+      <a href="#" class="btn">Shop New Collection</a>
+    </section>
+
+    <section class="product-listing">
+      <h2>Stocked Items</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="imajes/1jpg.jpeg" alt="Structured Linen Blazer">
+          <h3>Linen Blazer</h3>
+          <p class="Price">Ksh1300.00</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imajes/2jpg.jpeg" alt="Tommy Hill Figure(skinny geans)">
+          <h3>Skinny Jeans</h3>
+          <p class="price">Ksh750.00</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imajes/3jpg.jpeg" alt="Silk Crop Top">
+          <h3>Crop Top</h3>
+          <p class="price">Ksh300.00</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imajes/4jpg.jpeg" alt="Ripped Knit top">
+          <h3>Ripped Knit Top</h3>
+          <p class="price">Ksh500.00</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="benefits">
+        <h2>Why Shop with Fashion Store?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-truck-fast"></i>
+                <h3>Fast & Free Shipping</h3>
+                <p>Enjoy complimentary 3-day shipping on all orders over Ksh3000.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>Our 30-day no-hassle return policy ensures you love every purchase.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Quality Guaranteed</h3>
+                <p>Hand-picked materials and ethical sourcing for long-lasting quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale-offers">
+        <h2>Upcoming Sale Offers</h2>
+        <table class="sale-table">
+            <thead>
+                <tr>
+                    <th>Sale Event</th>
+                    <th>Category</th>
+                    <th>Discount</th>
+                    <th>Dates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Summer Clearance**</td>
+                    <td>Dresses & Skirts</td>
+                    <td>Up to 50% Off</td>
+                    <td>Oct 1st - Oct 7th</td>
+                </tr>
+                <tr>
+                    <td>**Denim Days**</td>
+                    <td>Jeans & Jackets</td>
+                    <td>20% Off All Denim</td>
+                    <td>Oct 15th - Oct 18th</td>
+                </tr>
+                <tr>
+                    <td>**Accessory Blitz**</td>
+                    <td>Jewellery & Bags</td>
+                    <td>Buy 2 Get 1 Free</td>
+                    <td>Oct 25th - Oct 27th</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h1 class="login-title">Login</h1>
+            <form class="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="login-button">Login</button>
+                
+                <p class="register-text">
+                    Don't have an account? <a href="#" class="register-link">Register</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fashion Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>
