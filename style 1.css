@@ -1,0 +1,427 @@
+/* GENERAL STYLES & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F5F5DC; /* Creamy color */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================================================= */
+/* LOGIN INTERFACE STYLES (Glassmorphism)                                    */
+/* ========================================================================= */
+.login-section {
+    /* Use padding to create space around the centered login box */
+    padding: 50px 5%;
+    /* Added background image for a better glassmorphism effect */
+    background: url('path/to/fashion-background.jpg') no-repeat center center/cover; 
+    /* You should replace 'path/to/fashion-background.jpg' with a real image path */
+}
+
+.login-container {
+    /* Center the login box and apply the glassmorphism effect */
+    width: 90%;
+    max-width: 400px;
+    margin: 0px auto; /* Centered in its section */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* The main blur effect */
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 10px rgba(160, 82, 45, 0.5); /* Highlight on focus */
+}
+
+.input-group i {
+    color: #A0522D; /* Sienna (brown) */
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-group input::placeholder {
+    color: #A0522D;
+    opacity: 0.8;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+.remember-me {
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #4CAF50; /* Green checkbox */
+}
+
+.forgot-password,
+.register-link {
+    color: #3498db; /* Blue */
+    transition: color 0.3s;
+}
+
+.forgot-password:hover,
+.register-link:hover {
+    color: #2980b9;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* ========================================================================= */
+/* FASHION STORE STYLES                                                      */
+/* ========================================================================= */
+
+/* --- Universal Button Style --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #29AB87; /* Jungle Green */
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+    border: none; /* Ensure buttons in product cards match this */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #238E68;
+    transform: translateY(-1px);
+}
+
+/* --- Header & Navigation (Eye Catchy Green) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.95); /* Near-white opaque header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    /* Jungle green color for 'Fashion Store' logo */
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #29AB87; /* Jungle Green */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul a {
+    color: #333;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #29AB87;
+    transition: width 0.3s;
+}
+
+nav ul a:hover {
+    color: #29AB87;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #ddd;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    color: #000000;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 1.15em;
+    color: #555;
+}
+
+.hero a.btn {
+    margin-top: 15px;
+}
+
+/* --- Product Listing --- */
+.product-listing {
+    padding: 20px 5% 50px;
+}
+
+.product-listing h2 {
+    /* Golden color for 'Stocked Items' */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #DAA520; /* Darker Gold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-card p.Price, .product-card p.price {
+    font-size: 1.3em;
+    color: #B22222; /* Firebrick for price */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.add-to-cart {
+    width: 85%;
+    padding: 10px;
+    background-color: #3498db; /* Blue for contrast */
+    border: none;
+    font-weight: 500;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+/* --- Benefits Section --- */
+.benefits {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+}
+
+.benefits h2 {
+    font-size: 2.2em;
+    color: #29AB87; /* Jungle Green */
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.benefit-card {
+    flex-basis: 30%;
+    min-width: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card i {
+    font-size: 3.5em;
+    color: #A0522D; /* Sienna Brown for icons */
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.benefit-card p {
+    color: #666;
+}
+
+
+/* --- Sale Offers Table --- */
+.sale-offers {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.sale-offers h2 {
+    font-size: 2.5em;
+    color: #B22222; /* Firebrick for Sale emphasis */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.sale-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sale-table th, .sale-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.sale-table th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.sale-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.sale-table tbody tr:hover {
+    background-color: #ffe8e8; /* Light pink on hover for eye-catchy effect */
+    transition: background-color 0.3s;
+}
+
+.sale-table td {
+    font-size: 1em;
+}
+
+/* Highlight specific columns for visual interest */
+.sale-table td:nth-child(3) {
+    font-weight: 700;
+    color: #B22222; /* Discount column in red */
